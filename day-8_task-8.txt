@@ -1,0 +1,76 @@
+Q.Write a “person” class to hold all the details.
+
+Code:
+
+class Person {
+static CompanyName = "Amazon";
+constructor(name, age, address) {
+this.name = name;
+this.age = age;
+this.address = address;
+}
+getData() {
+let personData = `
+Name: ${this.name}
+Age: ${this.age}
+Address: ${this.address} 
+`;
+console.log(personData);
+}
+static getCompanyName() {
+console.log(Person.CompanyName);
+}
+}
+class person1 extends Person {
+constructor(name, age, address, Designation, salary) {
+super(name, age, address);
+this.Designation = Designation;
+this.salary = salary;
+}
+getData() {
+let employeeData = `
+Name: ${this.name}
+Age: ${this.age}
+Address: ${this.address}
+Designation: ${this.Designation}
+Salary: ${this.salary}
+`;
+console.log(personData);
+}
+static getCompanyName() {
+console.log(Person.CompanyName);
+}
+}
+let person2 = new person1(
+"Jack",
+56,
+"Bangalore",
+"Mern Developer",
+"10000$"
+);
+person2.getData(); 
+person1.getCompanyName(); 
+
+OUTPUT:-
+             Name: Jack
+             Age: 56
+             Address: Bangalore
+             Designation: Mern Developer
+             Salary: 10000$
+Amazon
+
+Q.write a class to calculate uber price.
+
+class uber{
+constructor(distance,price){
+this.distance = distance;
+this.price = price;
+}
+getprice(){
+return this.distance*this.price;
+}
+}
+let taxi=new uber(2,100);
+console.log(taxi.getprice());
+
+OUTPUT:-200
